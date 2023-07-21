@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - closed
+
+jobs:
+  show:
+    name: show var
+    runs-on: ubuntu-22.04
+    steps:
+      - run: |
+          env
