@@ -2,8 +2,6 @@ name: PR Flow
 
 on:
   pull_request:
-    types:
-      - opened
 
 jobs:
   show:
