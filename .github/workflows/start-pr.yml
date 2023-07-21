@@ -24,6 +24,6 @@ jobs:
           sleep 5
           gh pr close $pr
           sleep 5
-          gh pr open $pr
+          gh pr reopen $pr
         env:
           GH_TOKEN: ${{ github.token }}
