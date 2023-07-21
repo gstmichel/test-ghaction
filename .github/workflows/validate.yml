@@ -1,0 +1,13 @@
+name: validate
+
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "done"
