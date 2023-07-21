@@ -5,6 +5,9 @@ on:
     branches:
       - feature/*
 
+permissions:
+  pull-requests: write
+
 jobs:
   show:
     name: Start PR
