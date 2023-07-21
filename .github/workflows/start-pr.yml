@@ -17,6 +17,13 @@ jobs:
         with:
           fetch-depth: 1
 
-      - run: gh pr create --base main --head feature/def --title "PR from feat to main" --body "Content"
+      - run: |
+          resp=$(gh pr create --base main --head feature/def --title "PR from feat to main" --body "Content")
+          pr=$(echo $resp | cut -d'/' -f 7)
+
+          sleep 5
+          gh pr close $pr
+          sleep 5
+          gh pr open $pr
         env:
           GH_TOKEN: ${{ github.token }}
