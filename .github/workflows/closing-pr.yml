@@ -2,10 +2,6 @@ name: PR Flow
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - closed
 
 jobs:
   show:
@@ -13,4 +9,5 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: |
+          echo "${{ github.event }}"
           echo "${{ github.event.number }}"
