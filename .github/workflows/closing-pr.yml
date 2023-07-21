@@ -2,6 +2,8 @@ name: PR Flow
 
 on:
   pull_request:
+    types:
+      - opened
 
 jobs:
   show:
@@ -9,5 +11,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - run: |
-          echo "${{ github.event }}"
+          echo "${{ github.event.action }}"
           echo "${{ github.event.number }}"
+          echo "done"
