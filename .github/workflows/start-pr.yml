@@ -14,6 +14,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - run: gh pr create --head main --base feature/def --title "PR from feat to main" --body "Content"
+      - run: gh pr create --base main --head feature/def --title "PR from feat to main" --body "Content"
         env:
           GH_TOKEN: ${{ github.token }}
